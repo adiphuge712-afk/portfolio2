@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- ✅ Keeps design scaling on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya's Portfolio</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* ✅ Reset margin & padding for consistent spacing across browsers */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ✅ Enables smooth scrolling for nav links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(1, 1, 44);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ✅ Navbar styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #17174b;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+            /* ✅ Makes nav items wrap on small screens */
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* ✅ Space between menu items */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(138, 120, 250);
+        }
+
+        .left {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* ✅ Section styling for consistent layout */
+        section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            /* ✅ Allows stacking on smaller devices */
+            padding: 50px 20px;
+            min-height: 100vh;
+        }
+
+        /* ✅ Text section */
+        .leftsection {
+            text-align: left;
+            font-size: 2.5rem;
+            flex: 1 1 300px;
+            /* ✅ Flexible width for responsiveness */
+        }
+
+        .leftsection span {
+            color: #3a3aff;
+        }
+
+        /* ✅ Image & links section */
+        .rightsection {
+            text-align: center;
+            flex: 1 1 300px;
+        }
+
+        .rightsection img {
+            width: 80%;
+            max-width: 250px;
+            border-radius: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* ✅ Skills container spacing */
+        .skilsdiv div {
+            margin: 14px 0;
+        }
+
+        /* ✅ Contact links */
+        .rightsection .links li {
+            list-style: none;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .rightsection a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .rightsection a:hover {
+            color: #3a3aff;
+        }
+
+        .contactinfo p {
+            margin: 10px 0;
+        }
+
+        /* Divider */
+        .line {
+            border-top: 1px solid rgb(36, 36, 130);
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #17174b;
+        }
+
+        /* ✅ Tablet responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                /* ✅ Stack logo & menu */
+                gap: 10px;
+                text-align: center;
+            }
+
+            .leftsection {
+                font-size: 1.8rem;
+                /* ✅ Smaller text for tablets */
+                text-align: center;
+            }
+
+            .rightsection img {
+                width: 60%;
+                max-width: 200px;
+            }
+
+            .rightsection .links li {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ✅ Mobile responsiveness */
+        @media (max-width: 480px) {
+            .leftsection {
+                font-size: 1.5rem;
+                /* ✅ Further reduce text size */
+            }
+
+            section {
+                padding: 30px 15px;
+                /* ✅ Reduce padding for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">Aditya Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ✅ Home Section -->
+        <section id="home" class="firstsection">
+            <div class="leftsection">
+                Hi I'm <span>Aditya</span>
+                <div>and I am a Full Stack Developer</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="IMG_20250126_143748.jpg" alt="Aditya's Photo">
+                <div class="links">
+                    <li class="fa fa-phone"> : 9970418166</li>
+                    <li class="fa fa-envelope"> : adiphuge@gmail.com</li>
+                    <li class="fa fa-linkedin" style="color: rgb(13, 93, 212);"> :
+                        <a href="https://www.linkedin.com/in/aditya-phuge-9a1b62251">Adi.linkedin</a>
+                    </li>
+                    <li class="fa fa-github" style="color: rgb(117, 113, 113);">
+                        <a href="https://github.com/adiphuge712-afk">Adi.git</a>
+                    </li>
+                </div>
+            </div>
+        </section>
+
+        <div class="line"></div>
+
+        <!-- ✅ About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p style="max-width:600px; text-align:center; margin:auto;">
+                I am Aditya Phuge, a passionate and dedicated Software Developer with a strong foundation in programming
+                and problem-solving. I enjoy building efficient, user-friendly, and scalable applications that make a
+                real impact. My skills include C, Java, Python, and web technologies such as HTML, CSS, and JavaScript.
+
+                I believe in continuous learning and always strive to improve my technical expertise while exploring new
+                tools and frameworks. I am particularly interested in full-stack development, software testing, and
+                system design.
+
+                Beyond coding, I value teamwork, clear communication, and delivering quality work on time. My goal is to
+                contribute to innovative projects in the IT sector and grow as a professional developer.
+            </p>
+        </section>
+
+        <div class="line"></div>
+
+        <!-- ✅ Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skilsdiv" style="max-width:600px; margin:auto; text-align:center;">
+                <div class="programing"><strong>Programming Languages:</strong> C, Java, Python</div>
+                <div class="webtech"><strong>Web Technologies:</strong> HTML, CSS, JavaScript, Bootstrap</div>
+                <div class="database"><strong>Databases:</strong> MySQL, PostgreSQL</div>
+                <div class="tools"><strong>Tools & Frameworks:</strong> Git & GitHub, VS Code, Eclipse</div>
+            </div>
+        </section>
+
+
+        <div class="line"></div>
+
+        <section class="container my-5">
+            <h2>Resume</h2>
+           <div>
+             <p>You can download my resume by clicking the button below:</p>
+            <a href="Adiresumefinal.pdf" download class="btn btn-primary">Download Resume (PDF)</a>
+           </div>
+        </section>
+        <div class="line"></div>
+        <!-- ✅ Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contactinfo">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-4 position-relative">
+                        <label for="validationTooltip01" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="validationTooltip01" value="Fist Name" required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <label for="validationTooltip02" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="validationTooltip02" value="Last Name" required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <label for="validationTooltipUsername" class="form-label">Email</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                            <input type="text" class="form-control" id="validationTooltipUsername"
+                                aria-describedby="validationTooltipUsernamePrepend" required>
+                            <div class="invalid-tooltip">
+                                Please choose a unique and valid username.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <label for="validationTooltip03" class="form-label">City</label>
+                        <input type="text" class="form-control" id="validationTooltip03" required>
+                        <div class="invalid-tooltip">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <label for="validationTooltip04" class="form-label">State</label>
+                        <select class="form-select" id="validationTooltip04" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>
+                                Maharashtra
+                            </option>
+                            <option>
+                                Banglore
+                            </option>
+                            <option>
+                                Chennai
+                            </option>
+                            <option>
+                                Haydrabad
+                            </option>
+
+                        </select>
+                        <div class="invalid-tooltip">
+                            Please select a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <label for="validationTooltip05" class="form-label">Coment</label>
+                        <input type="text" class="form-control" id="validationTooltip05" required>
+                        <div class="invalid-tooltip">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Aditya Phuge | All Rights Reserved</p>
+    </footer>
+
+    <!-- Typed.js Animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['I am passionate about Software Development'],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>
