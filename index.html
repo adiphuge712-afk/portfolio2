@@ -32,6 +32,11 @@
             font-family: Arial, sans-serif;
         }
 
+        header {
+            padding-top: 70px;
+            /* prevent content from hiding under nav */
+        }
+
         /* ✅ Navbar styling */
         nav {
             display: flex;
@@ -41,6 +46,14 @@
             padding: 10px 20px;
             flex-wrap: wrap;
             /* ✅ Makes nav items wrap on small screens */
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
         }
 
         nav ul {
@@ -79,6 +92,10 @@
             flex-wrap: wrap;
             /* ✅ Allows stacking on smaller devices */
             padding: 50px 20px;
+            min-height: auto;
+        }
+
+        .firstsection {
             min-height: 100vh;
         }
 
@@ -189,19 +206,21 @@
 <body>
 
     <header>
-        <nav>
-            <div class="left">Aditya Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#project">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+        
+            <nav>
+                <div class="left">Aditya Portfolio</div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
 
-                </ul>
-            </div>
-        </nav>
+                    </ul>
+                </div>
+            </nav>
+        
     </header>
 
     <main>
@@ -246,6 +265,8 @@
             </p>
         </section>
 
+
+
         <div class="line"></div>
 
         <!-- ✅ Skills Section -->
@@ -257,12 +278,13 @@
                 <div class="database"><strong>Databases:</strong> MySQL, PostgreSQL</div>
                 <div class="tools"><strong>Tools & Frameworks:</strong> Git & GitHub, VS Code, Eclipse</div>
             </div>
+
         </section>
-         <div class="line"></div>
+        <div class="line"></div>
         <section id="project">
             <h2>Projects</h2>
             <div>
-                <h5 >Company Visitor Management System</h5>
+                <h5>Company Visitor Management System</h5>
                 <p>
                     <strong>Team Size:</strong> 2<br>
                     <strong>Technologies:</strong> PHP, MySQL<br><br>
@@ -283,14 +305,14 @@
 
 
         <div class="line"></div>
-
-        <section class="container my-5">
+        <section>
             <h2>Resume</h2>
             <div>
                 <p>You can download my resume by clicking the button below:</p>
                 <a href="Adiresumefinal.pdf" download class="btn btn-primary">Download Resume (PDF)</a>
             </div>
         </section>
+
         <div class="line"></div>
         <!-- ✅ Contact Section -->
         <section id="contact">
@@ -382,4 +404,3 @@
 </body>
 
 </html>
-
